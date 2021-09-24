@@ -19,6 +19,7 @@ int main() {
 	
 
         int* array = generate_array(length);
+        if(array == NULL) exit(1);
         print_array(array, length);
 	
 	if(check_return_bet(array, length) 
@@ -47,6 +48,7 @@ int main() {
         
         if (continue_game == 0) {
             play = 0;
+            free(array);
         } else if (continue_game == 1 && budget <=0 ){
             budget = enter_budget();
         }
