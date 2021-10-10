@@ -20,6 +20,7 @@ double compute_sin(double x,double eps){
     	degree = 2*i + 1;
     	current = pow(-1,i) * pow(x, degree) / factorial (degree);
     	sum += current;
+    	i++;
 	}
     return sum;
 }
@@ -31,6 +32,7 @@ double compute_cos(double x, double eps){
     	degree = 2*i;
     	current = pow(-1,i) * pow(x, degree) / factorial (degree);
     	sum += current;
+    	i++;
 	}
     return sum;
 }

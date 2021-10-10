@@ -10,7 +10,6 @@ double curve_function(double x, double eps){
 
 int main(){
     
-    printf("Start computing... 1");
     double eps = 0.00001;
     int i;
 	// interval of curve computation -> [a, b]
@@ -22,8 +21,6 @@ int main(){
 
     double step = (double)((b - a) / count_of_segments); 
     
-    printf("Start computing...");
-    
     current_y = curve_function(current_x, eps);
 	
     for (i = 0; i < count_of_segments; i++, current_x +=step ){
@@ -33,7 +30,7 @@ int main(){
         current_y = next_y;
     }
     
-    printf("Length of curve : %lf\n", result);
+    printf("\nLength of curve : %lf\n", result);
     
     return 0;
 }
